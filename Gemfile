@@ -5,7 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
+gem 'sqlite3', groups: %w(test development), require: false
+gem 'pg', groups: %w(production), require: false
+
+#gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 #gem 'sqlite3', groups: %w(test development), require: false
 #gem 'pg', groups: %w(production), require: false
 
